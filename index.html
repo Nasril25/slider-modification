@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Slider</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="slider">
+      <div class="reviews">
+        <h2><span></span>Team Profile</h2>
+      </div>
+      <div class="slide-container">
+        <!-- Slide content will be populated dynamically -->
+      </div>
+      <div class="dots-container"></div>
+      <button class="btn prev-btn">←</button>
+      <button class="btn next-btn">→</button>
+    </section>
+
+    <!-- Modal for profile detail -->
+    <div id="profile-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div class="modal-body">
+          <img id="modal-img" src="" alt="" class="modal-img" />
+          <h3 id="modal-name"></h3>
+          <p id="modal-job"></p>
+          <p id="modal-text"></p>
+          <p id="modal-address"></p>
+          <p id="modal-dob"></p>
+          <p id="modal-education"></p>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

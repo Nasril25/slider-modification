@@ -1,0 +1,205 @@
+/* General styling */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #f1f1f1;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Slider styling */
+section {
+  width: 80%;
+  max-width: 800px;
+  margin: 50px auto;
+  position: relative;
+  padding: 2rem;
+  text-align: center;
+}
+
+.reviews h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Slide container */
+.slide-container {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.slide {
+  display: none; /* Semua slide disembunyikan secara default */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  text-align: center; /* Menyelaraskan teks di tengah */
+  padding: 20px;
+}
+
+.slide.active {
+  display: block; /* Hanya slide aktif yang ditampilkan */
+  opacity: 1;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slide img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+h4 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.title {
+  font-size: 1.2rem;
+  color: #888;
+}
+
+.text {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+.quote-icon {
+  margin-top: 20px;
+}
+
+/* Button styles */
+.btn {
+  position: absolute;
+  top: 50%;
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+/* Dots (indicators) */
+.dots-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+
+.dot.active {
+  background-color: #333;
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+  .prev-btn, .next-btn {
+    padding: 0.75rem;
+  }
+}
+
+/* Modal Styling */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.modal-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+
+.modal h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.modal-body p {
+  font-size: 1rem;
+  color: #555;
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #f44336; /* Red color for the button */
+  color: white; /* White text */
+  font-size: 20px; /* Larger font size */
+  border: none; /* Remove border */
+  border-radius: 50%; /* Circular shape */
+  padding: 10px 15px; /* Add some padding */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+
+.close-btn:hover {
+  background-color: #d32f2f; /* Darker red when hovered */
+  transform: scale(1.1); /* Slightly increase the size when hovered */
+}
+
+.close-btn:focus {
+  outline: none; /* Remove the default focus outline */
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.6); /* Add a focus ring */
+}
+
+.modal-body h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
